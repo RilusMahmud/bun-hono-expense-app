@@ -2,10 +2,13 @@ import { Hono } from "hono";
 import { zValidator } from "@hono/zod-validator";
 import { z } from "zod";
 
+import { db } from "../db";
+import { expenses as expensesTable } from "../db/schema/expenses";
+
 const expenseSchema = z.object({
   id: z.number().int().positive().min(1),
   title: z.string().min(3).max(100),
-  amount: z.number().int().positive(),
+  amount: z.string(),
 });
 
 type Expense = z.infer<typeof expenseSchema>;
@@ -13,20 +16,31 @@ type Expense = z.infer<typeof expenseSchema>;
 const createExpenseSchema = expenseSchema.omit({ id: true });
 
 const fakeExpenses: Expense[] = [
-  { id: 1, title: "Rent", amount: 1000 },
-  { id: 2, title: "Food", amount: 200 },
-  { id: 3, title: "Internet", amount: 50 },
+  { id: 1, title: "Rent", amount: "1000" },
+  { id: 2, title: "Food", amount: "200" },
+  { id: 3, title: "Internet", amount: "50" },
 ];
 
 export const expensesRoute = new Hono()
   .get("/", async (c) => {
-    return c.json({ expenses: fakeExpenses });
+    const expenses = await db.select().from(expensesTable);
+    return c.json({ expenses: expenses });
   })
   .post("/", zValidator("json", createExpenseSchema), async (c) => {
-    const expense = await c.req.valid("json");
+    const expense = c.req.valid("json");
+
+    const result = await db
+      .insert(expensesTable)
+      .values({
+        ...expense,
+        userId: "1",
+      })
+      .returning();
+
     // const expense = createExpenseSchema.parse(data);
-    fakeExpenses.push({ id: fakeExpenses.length + 1, ...expense });
-    return c.json(expense);
+    // fakeExpenses.push({ id: fakeExpenses.length + 1, ...expense });
+    c.status(201);
+    return c.json(result[0]);
   })
   .get("/:id{[0-9]+}", async (c) => {
     const id = Number.parseInt(c.req.param("id"));
