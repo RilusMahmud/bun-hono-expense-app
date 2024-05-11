@@ -15,6 +15,13 @@
       "when": 1715414289256,
       "tag": "0001_amused_unus",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1715449299391,
+      "tag": "0002_wonderful_zarek",
+      "breakpoints": true
     }
   ]
 }
