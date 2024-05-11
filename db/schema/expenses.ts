@@ -1,10 +1,4 @@
-import {
-  text,
-  numeric,
-  pgTable,
-  serial,
-  uniqueIndex,
-} from "drizzle-orm/pg-core";
+import { text, numeric, pgTable, serial, index } from "drizzle-orm/pg-core";
 
 export const expenses = pgTable(
   "expenses",
@@ -16,7 +10,7 @@ export const expenses = pgTable(
   },
   (expenses) => {
     return {
-      nameIndex: uniqueIndex("name_idx").on(expenses.userId),
+      nameIndex: index("name_idx").on(expenses.userId),
     };
   },
 );
