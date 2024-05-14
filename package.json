@@ -8,7 +8,8 @@
     "dev": "bun --watch index.ts",
     "db:generate": "bun drizzle-kit generate",
     "db:migrate": "bun drizzle-kit migrate",
-    "release": "standard-version"
+    "release": "standard-version",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -18,10 +19,13 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@hono/zod-validator": "^0.2.1",
     "@kinde-oss/kinde-typescript-sdk": "^2.9.0",
     "drizzle-orm": "^0.30.10",
     "hono": "^4.3.4",
+    "husky": "^9.0.11",
     "postgres": "^3.4.4",
     "standard-version": "^9.5.0",
     "zod": "^3.23.8"
