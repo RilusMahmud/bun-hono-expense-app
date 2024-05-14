@@ -1,12 +1,14 @@
 {
   "name": "bun-expense-app",
   "module": "index.ts",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "start": "bun index.ts",
     "dev": "bun --watch index.ts",
     "db:generate": "bun drizzle-kit generate",
-    "db:migrate": "bun drizzle-kit migrate"
+    "db:migrate": "bun drizzle-kit migrate",
+    "release": "standard-version"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -21,6 +23,7 @@
     "drizzle-orm": "^0.30.10",
     "hono": "^4.3.4",
     "postgres": "^3.4.4",
+    "standard-version": "^9.5.0",
     "zod": "^3.23.8"
   }
 }
