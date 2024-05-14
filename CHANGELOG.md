@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.2...v0.0.3) (2024-05-14)
+
+
+### Features
+
+* added standard release script ([4c5162b](https://github.com/RilusMahmud/bun-hono-expense-app/commit/4c5162b0a584bb0a58d6597748807bb3abe9caed))
+
 ### 0.0.2 (2024-05-14)
 
 
