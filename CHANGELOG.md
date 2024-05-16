@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.4...v0.0.5) (2024-05-16)
+
+
+### Features
+
+* added frontend into the project ([2de7416](https://github.com/RilusMahmud/bun-hono-expense-app/commit/2de74161487505f9fbb87f8e7a7a6cd631bb579f))
+
+
+### Bug Fixes
+
+* folder structure updated ([43f0e1f](https://github.com/RilusMahmud/bun-hono-expense-app/commit/43f0e1f4eaf26eeb176fad107dbb42c165c46852))
+
 ### [0.0.4](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.3...v0.0.4) (2024-05-14)
 
 
