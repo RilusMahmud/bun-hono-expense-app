@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     // Fetch the total amount spent from the server
-    fetch("/api/expenses/total-spent")
+    fetch("/api/v1/expenses/total-spent")
       .then((res) => res.json())
       .then((data) => setTotalSpent(data.total));
   }, []);
