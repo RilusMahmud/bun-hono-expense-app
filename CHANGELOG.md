@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.5...v0.0.6) (2024-05-17)
+
+
+### Features
+
+* added build and serve config from hono backend ([7aac59e](https://github.com/RilusMahmud/bun-hono-expense-app/commit/7aac59e952be4737f3a7ecb70d2c819f93b8774c))
+* added rpc with hono ([d4258b6](https://github.com/RilusMahmud/bun-hono-expense-app/commit/d4258b69ea0f26cd241dae8707604b33e6c73a4b))
+* added shadcn with tailwind ([96333bf](https://github.com/RilusMahmud/bun-hono-expense-app/commit/96333bff63a3e213eab14dc1568481c8b2720da3))
+* added tailwind config ([60d2b8f](https://github.com/RilusMahmud/bun-hono-expense-app/commit/60d2b8fe038bc5deaea5aca641b1f8a53732ffa9))
+* added total expense endpoint ([473398d](https://github.com/RilusMahmud/bun-hono-expense-app/commit/473398dc8577fcf3670313136f52537adc18b7c1))
+* added totalspent card ([17b6d2d](https://github.com/RilusMahmud/bun-hono-expense-app/commit/17b6d2d4624c9792e426586fb64709dd78f8bfa2))
+* configured vite proxy for api call ([7f13872](https://github.com/RilusMahmud/bun-hono-expense-app/commit/7f13872c5fcb0b2b32ad5f783c599c51de43a624))
+* updated script to use bun ([1291acd](https://github.com/RilusMahmud/bun-hono-expense-app/commit/1291acd5c50611d4307d8a71e11f9aa849cabc9d))
+
+
+### Bug Fixes
+
+* api endpoint fix ([09e28d8](https://github.com/RilusMahmud/bun-hono-expense-app/commit/09e28d86077b3f06a1167a284e3808dfbf9c0c7f))
+* fixed typo for total-spent ([2a31ca9](https://github.com/RilusMahmud/bun-hono-expense-app/commit/2a31ca92429e9e205657b1ead17389bb901563ca))
+
 ### [0.0.5](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.4...v0.0.5) (2024-05-16)
 
 
