@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.6...v0.0.7) (2024-05-19)
+
+
+### Features
+
+* added all expenses table with loading ([320cf58](https://github.com/RilusMahmud/bun-hono-expense-app/commit/320cf58bf4f1634ce301790fbaa8be1a588e84a7))
+* added all the pages ([c931ffa](https://github.com/RilusMahmud/bun-hono-expense-app/commit/c931ffa33e5835fadab642fddf654f2e86a35e58))
+* added tanstack query for state management ([9e77a2e](https://github.com/RilusMahmud/bun-hono-expense-app/commit/9e77a2e67a36eabc7df93866d8165a2eb403de74))
+* added tanstack router ([b8be915](https://github.com/RilusMahmud/bun-hono-expense-app/commit/b8be9158f0edc1591c219552d3657ee72af62ea5))
+
 ### [0.0.6](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.5...v0.0.6) (2024-05-17)
 
 
