@@ -4,6 +4,7 @@ import { z } from "zod";
 
 import { db } from "../db";
 import { expenses as expensesTable } from "../db/schema/expenses";
+import { sum } from "drizzle-orm";
 
 const expenseSchema = z.object({
   id: z.number().int().positive().min(1),
@@ -43,8 +44,11 @@ export const expensesRoute = new Hono()
     return c.json(result[0]);
   })
   .get("/total-spent", async (c) => {
-    const total = fakeExpenses.reduce((acc, e) => acc + Number(e.amount), 0);
-    return c.json({ total });
+    const res = await db
+      .select({ total: sum(expensesTable.amount) })
+      .from(expensesTable);
+    // const total = fakeExpenses.reduce((acc, e) => acc + Number(e.amount), 0);
+    return c.json({ total: res[0].total });
   })
   .get("/:id{[0-9]+}", async (c) => {
     const id = Number.parseInt(c.req.param("id"));
