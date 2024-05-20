@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.7...v0.0.8) (2024-05-20)
+
+
+### Features
+
+* added vercel.json ([7db89d7](https://github.com/RilusMahmud/bun-hono-expense-app/commit/7db89d7fe038ed22a31beead04e53f9282e4e54d))
+
+
+### Bug Fixes
+
+* added port with env config ([00530d6](https://github.com/RilusMahmud/bun-hono-expense-app/commit/00530d6d588e055024aff37f0e2c568455cda9b2))
+* fixec vercel json config ([fcb39b1](https://github.com/RilusMahmud/bun-hono-expense-app/commit/fcb39b166b51a8a81cb988ce49143df519e75ddc))
+* fixed vercel config ([04a9fd1](https://github.com/RilusMahmud/bun-hono-expense-app/commit/04a9fd107bd9cc3ea1c05a1cde1038202dc0755c))
+* fixed vercel config ([bb36419](https://github.com/RilusMahmud/bun-hono-expense-app/commit/bb364199bddc12cc0d1f2ae5a22af433c2e71f80))
+* fixed vercel json config ([8628bf0](https://github.com/RilusMahmud/bun-hono-expense-app/commit/8628bf0cee1bac6a1c665dab3118d9342cd9a887))
+* removed vercel config ([d92cea6](https://github.com/RilusMahmud/bun-hono-expense-app/commit/d92cea624950c049c31b1f5a2c5ff6001b5e7f33))
+* updated total spent from fake data to db call ([09a6f45](https://github.com/RilusMahmud/bun-hono-expense-app/commit/09a6f45a6080ffe6b5cdf6d93dff1355e0c8bd72))
+
 ### [0.0.7](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.6...v0.0.7) (2024-05-19)
 
 
