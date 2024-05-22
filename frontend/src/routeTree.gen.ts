@@ -11,48 +11,55 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as ProfileImport } from './routes/profile'
-import { Route as ExpensesImport } from './routes/expenses'
-import { Route as CreateExpensesImport } from './routes/create-expenses'
 import { Route as AboutImport } from './routes/about'
-import { Route as IndexImport } from './routes/index'
+import { Route as AuthenticatedImport } from './routes/_authenticated'
+import { Route as AuthenticatedIndexImport } from './routes/_authenticated/index'
+import { Route as AuthenticatedProfileImport } from './routes/_authenticated/profile'
+import { Route as AuthenticatedExpensesImport } from './routes/_authenticated/expenses'
+import { Route as AuthenticatedCreateExpensesImport } from './routes/_authenticated/create-expenses'
 
 // Create/Update Routes
-
-const ProfileRoute = ProfileImport.update({
-  path: '/profile',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const ExpensesRoute = ExpensesImport.update({
-  path: '/expenses',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const CreateExpensesRoute = CreateExpensesImport.update({
-  path: '/create-expenses',
-  getParentRoute: () => rootRoute,
-} as any)
 
 const AboutRoute = AboutImport.update({
   path: '/about',
   getParentRoute: () => rootRoute,
 } as any)
 
-const IndexRoute = IndexImport.update({
-  path: '/',
+const AuthenticatedRoute = AuthenticatedImport.update({
+  id: '/_authenticated',
   getParentRoute: () => rootRoute,
 } as any)
+
+const AuthenticatedIndexRoute = AuthenticatedIndexImport.update({
+  path: '/',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+
+const AuthenticatedProfileRoute = AuthenticatedProfileImport.update({
+  path: '/profile',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+
+const AuthenticatedExpensesRoute = AuthenticatedExpensesImport.update({
+  path: '/expenses',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+
+const AuthenticatedCreateExpensesRoute =
+  AuthenticatedCreateExpensesImport.update({
+    path: '/create-expenses',
+    getParentRoute: () => AuthenticatedRoute,
+  } as any)
 
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexImport
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: ''
+      preLoaderRoute: typeof AuthenticatedImport
       parentRoute: typeof rootRoute
     }
     '/about': {
@@ -62,26 +69,33 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutImport
       parentRoute: typeof rootRoute
     }
-    '/create-expenses': {
-      id: '/create-expenses'
+    '/_authenticated/create-expenses': {
+      id: '/_authenticated/create-expenses'
       path: '/create-expenses'
       fullPath: '/create-expenses'
-      preLoaderRoute: typeof CreateExpensesImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof AuthenticatedCreateExpensesImport
+      parentRoute: typeof AuthenticatedImport
     }
-    '/expenses': {
-      id: '/expenses'
+    '/_authenticated/expenses': {
+      id: '/_authenticated/expenses'
       path: '/expenses'
       fullPath: '/expenses'
-      preLoaderRoute: typeof ExpensesImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof AuthenticatedExpensesImport
+      parentRoute: typeof AuthenticatedImport
     }
-    '/profile': {
-      id: '/profile'
+    '/_authenticated/profile': {
+      id: '/_authenticated/profile'
       path: '/profile'
       fullPath: '/profile'
-      preLoaderRoute: typeof ProfileImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof AuthenticatedProfileImport
+      parentRoute: typeof AuthenticatedImport
+    }
+    '/_authenticated/': {
+      id: '/_authenticated/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedIndexImport
+      parentRoute: typeof AuthenticatedImport
     }
   }
 }
@@ -89,11 +103,13 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 export const routeTree = rootRoute.addChildren({
-  IndexRoute,
+  AuthenticatedRoute: AuthenticatedRoute.addChildren({
+    AuthenticatedCreateExpensesRoute,
+    AuthenticatedExpensesRoute,
+    AuthenticatedProfileRoute,
+    AuthenticatedIndexRoute,
+  }),
   AboutRoute,
-  CreateExpensesRoute,
-  ExpensesRoute,
-  ProfileRoute,
 })
 
 /* prettier-ignore-end */
