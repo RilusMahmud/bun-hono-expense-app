@@ -1,15 +1,18 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 
 import { useForm } from "@tanstack/react-form";
 
+import { api } from "@/lib/api";
+
 export const Route = createFileRoute("/create-expenses")({
   component: CreateExpenses,
 });
 
 function CreateExpenses() {
+  const navigate = useNavigate();
   const form = useForm({
     defaultValues: {
       title: "",
@@ -17,7 +20,12 @@ function CreateExpenses() {
     },
     onSubmit: async ({ value }) => {
       // Do something with form data
-      console.log(value);
+      // await new Promise((resolve) => setTimeout(resolve, 3000));
+      const res = await api.v1.expenses.$post({ json: value });
+      if (!res.ok) {
+        throw new Error("Failed to create expense");
+      }
+      navigate({ to: "/expenses" });
     },
   });
 
@@ -67,7 +75,14 @@ function CreateExpenses() {
             </>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <form.Subscribe
+          selector={(state) => [state.canSubmit, state.isSubmitting]}
+          children={([canSubmit, isSubmitting]) => (
+            <Button className="mt-4" type="submit" disabled={!canSubmit}>
+              {isSubmitting ? "..." : "Submit"}
+            </Button>
+          )}
+        />
       </form>
     </div>
   );
