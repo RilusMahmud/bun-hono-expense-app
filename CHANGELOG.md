@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.10...v0.0.11) (2024-05-22)
+
+
+### Features
+
+* added zod validator into form validation method ([5d67f3f](https://github.com/RilusMahmud/bun-hono-expense-app/commit/5d67f3fb324f2785c1551bd4196a592e5805b35e))
+
+
+### Bug Fixes
+
+* moved the schema definition into utils ([1fe8c78](https://github.com/RilusMahmud/bun-hono-expense-app/commit/1fe8c7885e5097b04ceb32457273caaaddf095d9))
+* style update for error messages ([ae3c015](https://github.com/RilusMahmud/bun-hono-expense-app/commit/ae3c015e0790099a84bb81002ac3cdd8ddd4f814))
+* updated zod validator with work with drizzle ([785fb54](https://github.com/RilusMahmud/bun-hono-expense-app/commit/785fb54c1b1b67b0be3065f76c36a7537fe51d4d))
+
 ### [0.0.10](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.9...v0.0.10) (2024-05-22)
 
 
