@@ -4,7 +4,10 @@ import { getUser } from "../kinde";
 import { createExpenseSchema } from "../utils/types";
 
 import { db } from "../db";
-import { expenses as expensesTable } from "../db/schema/expenses";
+import {
+  expenses as expensesTable,
+  insertExpensesSchema,
+} from "../db/schema/expenses";
 import { sum, eq, desc, and } from "drizzle-orm";
 
 export const expensesRoute = new Hono()
@@ -21,12 +24,14 @@ export const expensesRoute = new Hono()
     const user = c.var.user;
     const expense = c.req.valid("json");
 
+    const validatedExpense = insertExpensesSchema.parse({
+      ...expense,
+      userId: user.id,
+    });
+
     const result = await db
       .insert(expensesTable)
-      .values({
-        ...expense,
-        userId: user.id,
-      })
+      .values(validatedExpense)
       .returning();
 
     // const expense = createExpenseSchema.parse(data);
