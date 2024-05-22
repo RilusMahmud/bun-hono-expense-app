@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.9...v0.0.10) (2024-05-22)
+
+
+### Bug Fixes
+
+* fixed all the db queries ([560bc5c](https://github.com/RilusMahmud/bun-hono-expense-app/commit/560bc5c007a7f7ea6c4e7687e9150ae24f86fa10))
+
 ### [0.0.9](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.8...v0.0.9) (2024-05-22)
 
 
