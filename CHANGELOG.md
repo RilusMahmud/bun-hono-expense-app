@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.8...v0.0.9) (2024-05-22)
+
+
+### Features
+
+* added create from with tanstack form ([ba1e0d3](https://github.com/RilusMahmud/bun-hono-expense-app/commit/ba1e0d362918c336616c90b7e3100541f8a95ad6))
+* added form submission api ([90cb787](https://github.com/RilusMahmud/bun-hono-expense-app/commit/90cb7872e224f5967f7c069851aa386292f40e17))
+* added getuser middleware for authenticated routes ([c3c6330](https://github.com/RilusMahmud/bun-hono-expense-app/commit/c3c6330e98be69604956dfc3b92275203713718d))
+* added profile page with api ([c37447e](https://github.com/RilusMahmud/bun-hono-expense-app/commit/c37447e005a4d778ab2be9c67b1c74254a15e2a8))
+* added user query option with staletime infinity ([4ca7e3c](https://github.com/RilusMahmud/bun-hono-expense-app/commit/4ca7e3c84f47d416b58a9f74b593ae33027553b8))
+* updated with authenticated route setup ([7c22c24](https://github.com/RilusMahmud/bun-hono-expense-app/commit/7c22c2482f315ca8169e2d5be8ffef6096ca2195))
+
+
+### Bug Fixes
+
+* added getuser middleware with all the api ([07d280d](https://github.com/RilusMahmud/bun-hono-expense-app/commit/07d280dc5c8dc7824cae0cf6a6d9ce6fa100e7b8))
+* updated with login and logout with protected routes ([852f066](https://github.com/RilusMahmud/bun-hono-expense-app/commit/852f0660d554f87be7a9edfb2c0946d91ac14345))
+
 ### [0.0.8](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.7...v0.0.8) (2024-05-20)
 
 
