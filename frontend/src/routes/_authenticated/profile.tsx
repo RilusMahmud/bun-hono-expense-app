@@ -16,6 +16,7 @@ function Profile() {
     <div className="p-2">
       Profile!
       <p>Hello {data.user.given_name}</p>
+      <a href="/api/v1/logout">Logout</a>
     </div>
   );
 }
