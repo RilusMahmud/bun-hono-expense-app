@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.11...v0.0.12) (2024-05-23)
+
+
+### Features
+
+* added date property with db migration ([d85d9d4](https://github.com/RilusMahmud/bun-hono-expense-app/commit/d85d9d411faa6729f9308dbd52d33c67d2f5bb4a))
+* added date props for the create and get expenses ([9293f5d](https://github.com/RilusMahmud/bun-hono-expense-app/commit/9293f5d4d6e6e34e211d24fd143083eb693da792))
+
+
+### Bug Fixes
+
+* ui update with styling ([489f78e](https://github.com/RilusMahmud/bun-hono-expense-app/commit/489f78e80a4d28ee0b28a21848d5ff3e072d0aba))
+
 ### [0.0.11](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.10...v0.0.11) (2024-05-22)
 
 
