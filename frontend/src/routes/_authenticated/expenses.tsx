@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { api } from "@/lib/api";
+import {
+  getAllExpensesQueryOptions,
+  loadingCreateExpenseQueryOptions,
+} from "@/lib/api";
 import { useQuery } from "@tanstack/react-query";
 
 import {
@@ -19,22 +22,12 @@ export const Route = createFileRoute("/_authenticated/expenses")({
   component: Expenses,
 });
 
-async function getAllExpenses() {
-  new Promise((resolve) => setTimeout(resolve, 3000));
-  const res = await api.v1.expenses.$get();
-  if (!res.ok) {
-    throw new Error("Failed to fetch total spent");
-  }
-  const data = await res.json();
-  return data;
-}
-
 function Expenses() {
   // Queries
-  const { isPending, error, data } = useQuery({
-    queryKey: ["get-all-expenses"],
-    queryFn: getAllExpenses,
-  });
+  const { isPending, error, data } = useQuery(getAllExpensesQueryOptions);
+  const { data: loadingCreateExpense } = useQuery(
+    loadingCreateExpenseQueryOptions,
+  );
 
   if (error) return "An error has occurred: " + error.message;
 
@@ -52,6 +45,16 @@ function Expenses() {
           </TableRow>
         </TableHeader>
         <TableBody>
+          {loadingCreateExpense?.expense && (
+            <TableRow>
+              <TableCell className="font-medium">
+                <Skeleton className="h-4" />
+              </TableCell>
+              <TableCell>{loadingCreateExpense?.expense.title}</TableCell>
+              <TableCell>{loadingCreateExpense?.expense.amount}</TableCell>
+              <TableCell>{loadingCreateExpense?.expense.date}</TableCell>
+            </TableRow>
+          )}
           {isPending
             ? Array.from({ length: 5 }).map((_, i) => (
                 <TableRow key={i}>
