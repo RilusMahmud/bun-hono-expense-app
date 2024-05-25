@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.12...v0.0.13) (2024-05-25)
+
+
+### Features
+
+* [optimization] added caching and optimistic update ([1b1b632](https://github.com/RilusMahmud/bun-hono-expense-app/commit/1b1b632dcd83c92fd66da4db6850889120555c17))
+* added delete expense feature ([8fd01ec](https://github.com/RilusMahmud/bun-hono-expense-app/commit/8fd01ecbb636b78f7beb10135bf2a61779fcc091))
+* adding delete expense feature [wip] ([4c5c888](https://github.com/RilusMahmud/bun-hono-expense-app/commit/4c5c888f62f3a197bdb2a1997f59f0e637cc91df))
+
 ### [0.0.12](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.11...v0.0.12) (2024-05-23)
 
 
