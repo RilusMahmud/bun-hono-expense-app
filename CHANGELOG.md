@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v1.0.0...v1.1.0) (2024-07-16)
+
+
+### Features
+
+* added ci for docker ([0ccd3e4](https://github.com/RilusMahmud/bun-hono-expense-app/commit/0ccd3e45d280b24290c63947463f97dea5cc7284))
+* added Dockerfile with docker init boilerplate ([c4d1f7a](https://github.com/RilusMahmud/bun-hono-expense-app/commit/c4d1f7a5e8c7e0842053142abdef0c4b17209609))
+* added healthcheck api ([e0ce8c3](https://github.com/RilusMahmud/bun-hono-expense-app/commit/e0ce8c34532e8719aefea416ebe19200e53162e6))
+
+
+### Bug Fixes
+
+* fixed ci error ([98baf70](https://github.com/RilusMahmud/bun-hono-expense-app/commit/98baf7017c931b5f273943b06cd5a35eed290669))
+* fixed docker image ref error ([66e58a0](https://github.com/RilusMahmud/bun-hono-expense-app/commit/66e58a0ebb0627b3f8dda3f1d828268918a2a163))
+* updated Dockerfile with dockerignore file ([183d5af](https://github.com/RilusMahmud/bun-hono-expense-app/commit/183d5afa3fac11ce8b927f02ad47a5d19e0490bd))
+
 ## [1.0.0](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.13...v1.0.0) (2024-05-25)
 
 ### [0.0.13](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v0.0.12...v0.0.13) (2024-05-25)
