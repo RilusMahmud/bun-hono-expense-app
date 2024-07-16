@@ -9,7 +9,8 @@
     "db:generate": "bun drizzle-kit generate",
     "db:migrate": "bun drizzle-kit migrate",
     "release": "standard-version",
-    "prepare": "husky"
+    "prepare": "husky",
+    "healthcheck": "bun run src/healthcheck.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",

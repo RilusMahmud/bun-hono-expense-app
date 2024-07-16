@@ -9,6 +9,10 @@ const app = new Hono();
 
 app.use("*", logger());
 
+app.get("/healthcheck", (c) => {
+  return c.json({ message: "OK" }, 200);
+});
+
 const apiRoutes = app
   .route("/api/v1")
   .route("/expenses", expensesRoute)
