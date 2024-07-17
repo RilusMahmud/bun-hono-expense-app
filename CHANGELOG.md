@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v1.1.0...v1.1.1) (2024-07-17)
+
+
+### Features
+
+* added docker-compose ([35e04df](https://github.com/RilusMahmud/bun-hono-expense-app/commit/35e04df8052b7e82b09b378511478b7fda60011a))
+
+
+### Bug Fixes
+
+* fixed the title of the app ([d356fa3](https://github.com/RilusMahmud/bun-hono-expense-app/commit/d356fa32f576dd8c621ba2b316ee02ec13f1f961))
+* updated the docker-compose with new guideline ([281aeb3](https://github.com/RilusMahmud/bun-hono-expense-app/commit/281aeb391d4fe29ec3723f259c6570a1091656b3))
+
 ## [1.1.0](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v1.0.0...v1.1.0) (2024-07-16)
 
 
