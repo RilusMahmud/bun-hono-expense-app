@@ -1,5 +1,4 @@
 ---
-version: "3.9"
 services:
   web:
     image: rilusmahmud/bun-expense-app:main-1.1.0
