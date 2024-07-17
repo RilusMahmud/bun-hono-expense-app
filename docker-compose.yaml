@@ -1,0 +1,22 @@
+---
+version: "3.9"
+services:
+  web:
+    image: rilusmahmud/bun-expense-app:main-1.1.0
+    container_name: bun-expense-app
+    ports:
+      - 3000:3000
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:16.3
+    container_name: postgres
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=rilus
+      - POSTGRES_PASSWORD=r1lu5mahmud4880
+    ports:
+      - 29951:5432
