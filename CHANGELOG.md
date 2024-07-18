@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v1.1.1...v1.2.0) (2024-07-18)
+
+
+### Features
+
+* added dayjs for showing utc time to local time ([635c72d](https://github.com/RilusMahmud/bun-hono-expense-app/commit/635c72d17283980429c35ec26147853e6da8b1b5))
+* updated db schema with migration ([9595167](https://github.com/RilusMahmud/bun-hono-expense-app/commit/9595167a3bd40cb138b05cfa15903f56d39a3f57))
+* updated the schema with timestamp for date column ([8c7ebfc](https://github.com/RilusMahmud/bun-hono-expense-app/commit/8c7ebfc8c964b52fd0a91a89fb3dc8343eb2d537))
+
 ### [1.1.1](https://github.com/RilusMahmud/bun-hono-expense-app/compare/v1.1.0...v1.1.1) (2024-07-17)
 
 
