@@ -2,6 +2,10 @@ import { hc } from "hono/client";
 import { type ApiRoutes } from "@server/app";
 import { queryOptions } from "@tanstack/react-query";
 import { type CreateExpense } from "@server/utils/types";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+
+dayjs.extend(utc);
 
 const client = hc<ApiRoutes>("/");
 
@@ -29,6 +33,12 @@ export async function getAllExpenses() {
     throw new Error("Failed to fetch total spent");
   }
   const data = await res.json();
+  // manipulate data here with data format with dayjs
+  data.expenses = data.expenses.map((e) => ({
+    ...e,
+    // here e.date is in utc, convert into local time
+    date: dayjs.utc(e.date).local().format("YYYY-MM-DD"),
+  }));
   return data;
 }
 
