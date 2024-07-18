@@ -16,7 +16,7 @@ export const expenses = pgTable(
     userId: text("user_id").notNull(),
     title: text("title").notNull(),
     amount: numeric("amount", { precision: 12, scale: 2 }).notNull(),
-    date: timestamp("date").notNull(),
+    date: timestamp("date", { mode: "string" }).notNull(),
     createdAt: timestamp("created_at").notNull().defaultNow(),
   },
   (expenses) => {
@@ -35,6 +35,7 @@ export const insertExpensesSchema = createInsertSchema(expenses, {
   amount: z.string().regex(/^\d+(\.\d{1,2})?$/, {
     message: "Amount must be a number with up to 2 decimal places!",
   }),
+  date: z.string().datetime(),
 });
 // Schema for selecting a user - can be used to validate API responses
 export const selectExpensesSchema = createSelectSchema(expenses);
