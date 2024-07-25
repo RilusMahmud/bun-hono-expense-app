@@ -20,6 +20,11 @@ import { Trash } from "lucide-react";
 ("lucide-react");
 import { toast } from "sonner";
 
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+
+dayjs.extend(utc);
+
 export const Route = createFileRoute("/_authenticated/expenses")({
   component: Expenses,
 });
@@ -55,7 +60,10 @@ function Expenses() {
               <TableCell>{loadingCreateExpense?.expense.title}</TableCell>
               <TableCell>{loadingCreateExpense?.expense.amount}</TableCell>
               <TableCell>
-                {loadingCreateExpense?.expense.date.split("T")[0]}
+                {dayjs
+                  .utc(loadingCreateExpense?.expense.date)
+                  .local()
+                  .format("YYYY-MM-DD")}
               </TableCell>
               <TableCell className="font-medium">
                 <Skeleton className="h-4" />
