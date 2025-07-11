@@ -1,0 +1,70 @@
+## Feature Roadmap
+Below is a prioritized list of suggested enhancements to improve the overall user experience and functionality of the app.
+
+# Expense Tracker – Feature Ideas & Enhancements
+
+This document outlines prioritized features to enhance the expense tracking web application. Features are organized by importance and impact, with a balance between usability, data intelligence, and user engagement.
+
+## Priority Features (High Impact, Medium Effort)
+
+### Expense Features
+- **Categories & Tags**  
+  Add categories like Food, Travel, Bills, etc., or allow users to create custom ones.
+
+- **Edit Option**  
+  Enable users to edit existing expenses (title, amount, date).
+
+- **Filter & Search**  
+  Allow users to filter expenses by date, amount, category, or keyword.
+
+- **Recurring Expenses**  
+  Let users mark recurring expenses such as rent, subscriptions, etc.
+
+- **Notes/Description Field**  
+  Add a field to include optional notes (e.g., "birthday gift for friend").
+
+### Insights & Visualization
+- **Dashboard**  
+  Display total monthly spending, weekly average, highest expense, etc.
+
+- **Charts**  
+  Include pie charts by category and line/bar charts over time.
+
+- **Budget Tracking**  
+  Allow users to set monthly or weekly spending limits and track against them.
+
+### User Account & Security
+- **Account Deletion Option**  
+  Allow users to delete or deactivate their account from settings.
+
+- **Profile Management**  
+  Enable profile updates (name, email, password).
+
+## Medium Priority Features (Medium Impact, Low to Medium Effort)
+
+### Data Intelligence
+- **Spending Streaks & Habits**  
+  Display insights like: "Logged expenses 6 days in a row" or "You spend most on Sundays".
+
+- **Spending Challenges**  
+  Add monthly savings goals or "No-Spend Week" style mini challenges.
+
+- **Export as CSV/PDF**  
+  Allow users to export their full expense history for records or tax purposes.
+
+## Advanced Features (High Impact, High Effort)
+
+### Time-Based Intelligence
+- **Daily/Weekly Spending Summary Email**  
+  Optional email report summarizing recent spending trends.
+
+- **Expense Forecasting**  
+  Use historical data to predict upcoming month's expenses.
+
+## Optional Features (Nice-to-Have)
+
+- **Multi-Currency Support**  
+  Support input of multiple currencies and conversion logic (optional, for international users).
+
+- **Two-Factor Authentication (2FA)**  
+  Add an extra layer of security for user accounts.
